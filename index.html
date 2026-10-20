@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Liz Sites, Children's Book Author</title>
+<meta name="description" content="Official website of Liz Sites, children's book author. Imaginative, thoughtful children's books that explore family, loyalty, and belief.">
+<meta property="og:title" content="Liz Sites, Children's Book Author">
+<meta property="og:description" content="Imaginative, thoughtful children's books that explore family, loyalty, and belief.">
+<meta property="og:site_name" content="Liz Sites">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.lizsites.com">
+<meta property="og:image" content="https://www.lizsites.com/images/wheat-field.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Raleway:wght@400;500;600&display=swap">
+<style>
+/* Layout: Liz's original look (white and soft grey, near-black type, Cormorant Garamond with Raleway), warmed with wheat gold from her field photo. Photo-led sections alternate sides like turning pages. */
+:root {
+  --bg: #FFFFFF;
+  --bg-soft: #F7F7F7;
+  --ink: #191919;
+  --ink-soft: #5B5A56;
+  --rule: #E5E2DB;
+  --wheat: #C49A4E;
+  --wheat-ink: #8A6424;
+  --wheat-pale: #F5EEE1;
+  --band: #191919;
+  --band-ink: #F7F7F7;
+  --flag: #FFF3CC;
+  --flag-ink: #6E4A00;
+  --flag-rule: #E3C46A;
+  --shade: rgba(16, 20, 14, 0.55);
+
+  --serif: "Cormorant Garamond", "Garamond", "Georgia", serif;
+  --sans: "Raleway", "Helvetica Neue", "Segoe UI", sans-serif;
+
+  --step-0: 1.02rem;
+  --step-1: 1.35rem;
+  --step-2: 1.9rem;
+  --step-3: clamp(2.2rem, 4.5vw, 3rem);
+  --step-4: clamp(3.2rem, 9vw, 6rem);
+  --measure: 62ch;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141414; --bg-soft: #1C1C1B; --ink: #F2F0EA; --ink-soft: #B6B3AB; --rule: #33322F;
+    --wheat: #D9AE62; --wheat-ink: #E3BE7A; --wheat-pale: #29231A; --band: #0C0C0C; --band-ink: #F2F0EA;
+    --flag: #3A3016; --flag-ink: #F2D68C; --flag-rule: #7C6630; --shade: rgba(0, 0, 0, 0.6);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141414; --bg-soft: #1C1C1B; --ink: #F2F0EA; --ink-soft: #B6B3AB; --rule: #33322F;
+  --wheat: #D9AE62; --wheat-ink: #E3BE7A; --wheat-pale: #29231A; --band: #0C0C0C; --band-ink: #F2F0EA;
+  --flag: #3A3016; --flag-ink: #F2D68C; --flag-rule: #7C6630; --shade: rgba(0, 0, 0, 0.6);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--sans); font-size: var(--step-0); line-height: 1.8;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+a { color: inherit; text-decoration-color: var(--wheat); text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
+a:hover { color: var(--wheat-ink); }
+:focus-visible { outline: 2px solid var(--wheat); outline-offset: 3px; border-radius: 3px; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.1; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+img { display: block; max-width: 100%; }
+
+.wrap {
+  max-width: 1120px; margin-inline: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--wheat-ink); }
+
+/* Review bar and notes */
+.review { background: var(--flag); color: var(--flag-ink); border-bottom: 1px solid var(--flag-rule); font-size: 0.88rem; line-height: 1.5; }
+.review .wrap { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: center; justify-content: space-between; padding-block: 0.6rem; }
+.review button { font: inherit; font-weight: 600; color: var(--flag-ink); background: transparent; border: 1.5px solid var(--flag-ink); border-radius: 999px; padding: 0.2rem 0.85rem; cursor: pointer; }
+.draft-note { background: var(--flag); color: var(--flag-ink); border: 1px dashed var(--flag-rule); border-radius: 8px; padding: 0.6rem 0.9rem; font-size: 0.86rem; line-height: 1.55; max-width: var(--measure); }
+.ph { background: var(--flag); color: var(--flag-ink); border-radius: 3px; padding: 0 0.25em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+body.notes-off .ph { background: transparent; color: inherit; padding: 0; }
+
+/* Header */
+header.site { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--rule); }
+header.site .wrap { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.2rem 1.5rem; padding-block: 0.8rem; }
+.wordmark { font-family: var(--serif); font-size: 1.45rem; text-decoration: none; letter-spacing: 0.01em; }
+.wordmark small { font-size: 0.95rem; font-style: italic; color: var(--ink-soft); margin-left: 0.35rem; }
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.1rem 1.4rem; }
+nav a { text-decoration: none; font-size: 0.86rem; letter-spacing: 0.04em; }
+nav a:hover { text-decoration: underline; }
+
+/* Hero */
+.hero { position: relative; color: #FFFFFF; background: #2A2E22 url("images/wheat-field.jpg") center 62% / cover no-repeat; }
+.hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(14,18,12,0.62) 0%, rgba(14,18,12,0.35) 55%, rgba(14,18,12,0.1) 100%); }
+.hero .wrap { position: relative; padding-block: clamp(4.5rem, 12vw, 8.5rem) clamp(7rem, 16vw, 11rem); display: grid; gap: 1.1rem; justify-items: start; }
+.hero .eyebrow { color: #EBD39E; }
+.hero h1 { font-size: var(--step-4); font-weight: 300; letter-spacing: 0.01em; }
+.hero .lede { font-family: var(--serif); font-size: clamp(1.3rem, 2.6vw, 1.75rem); font-style: italic; font-weight: 300; max-width: 30ch; line-height: 1.35; }
+.hero .cta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.75rem; }
+.btn { display: inline-block; font-family: var(--sans); font-weight: 500; font-size: 0.9rem; letter-spacing: 0.06em; text-decoration: none; padding: 0.75rem 1.4rem; border: 1px solid currentColor; border-radius: 2px; }
+.hero .btn.solid { background: #FFFFFF; color: #191919; border-color: #FFFFFF; }
+.hero .btn.solid:hover { background: #EBD39E; border-color: #EBD39E; color: #191919; }
+.hero .btn.line { color: #FFFFFF; }
+.hero .btn.line:hover { background: rgba(255,255,255,0.12); color: #FFFFFF; }
+.hero .socials a { color: #FFFFFF; }
+.hero .draft-note { margin-top: 0.5rem; }
+
+/* Generic section */
+section.page { padding-block: clamp(3.5rem, 8vw, 6rem); }
+section.soft { background: var(--bg-soft); }
+.head { display: grid; gap: 0.6rem; margin-bottom: 2.2rem; max-width: var(--measure); }
+.head h2 { font-size: var(--step-3); font-weight: 300; }
+.prose { display: grid; gap: 1.1rem; max-width: var(--measure); min-width: 0; }
+.prose p { color: var(--ink); }
+
+/* Photo + text spreads */
+.spread { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(2rem, 6vw, 5rem); align-items: center; }
+.spread.flip { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); }
+.spread.flip .photo-col { order: 2; }
+@media (max-width: 780px) {
+  .spread, .spread.flip { grid-template-columns: minmax(0, 1fr); }
+  .spread.flip .photo-col { order: 0; }
+}
+.arch { border-radius: 999px 999px 6px 6px; overflow: hidden; aspect-ratio: 4 / 5; max-width: 100%; background: var(--wheat-pale); }
+.arch img { width: 100%; height: 100%; object-fit: cover; object-position: 62% 40%; }
+figure { margin: 0; }
+figcaption { font-family: var(--serif); font-style: italic; font-size: 1.05rem; color: var(--ink-soft); margin-top: 0.7rem; text-align: center; }
+.snapshot { background: var(--bg); padding: 0.8rem 0.8rem 0.3rem; box-shadow: 0 1px 2px rgba(0,0,0,0.08), 0 10px 28px rgba(0,0,0,0.1); transform: rotate(-2deg); max-width: 380px; margin-inline: auto; }
+.snapshot img { aspect-ratio: 4 / 5; width: 100%; height: auto; object-fit: cover; object-position: center 30%; }
+.snapshot figcaption { margin-block: 0.6rem 0.4rem; }
+@media (prefers-reduced-motion: no-preference) {
+  .snapshot { transition: transform 0.4s ease; }
+  .snapshot:hover { transform: rotate(0deg); }
+}
+@media (max-width: 780px) { .arch { max-width: 420px; margin-inline: auto; width: 100%; } }
+
+.favorites { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 1.25rem; margin-top: 0.4rem; }
+.favorites div { border-top: 1px solid var(--wheat); padding-top: 0.8rem; min-width: 0; }
+.favorites h3 { font-size: 1.25rem; font-style: italic; font-weight: 400; margin-bottom: 0.3rem; }
+.favorites p { font-size: 0.95rem; color: var(--ink-soft); }
+
+/* Credentials */
+.cred-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+.cred-tags span { font-size: 0.8rem; letter-spacing: 0.05em; padding: 0.35rem 0.8rem; border: 1px solid var(--rule); border-radius: 999px; background: var(--bg); }
+
+/* Books band */
+.shelf-band { position: relative; color: #FFFFFF; background: #3A2E22 url("images/bookshelf.jpg") center / cover no-repeat; }
+.shelf-band::before { content: ""; position: absolute; inset: 0; background: rgba(20, 15, 10, 0.58); }
+.shelf-band .wrap { position: relative; padding-block: clamp(4rem, 10vw, 7rem); display: grid; gap: 1rem; justify-items: center; text-align: center; }
+.shelf-band .eyebrow { color: #EBD39E; }
+.shelf-band h2 { font-size: var(--step-3); font-weight: 300; max-width: 24ch; line-height: 1.2; }
+.status { display: inline-block; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.4rem 1rem; border: 1px solid rgba(255,255,255,0.6); border-radius: 999px; }
+.shelf-band .status .ph { color: var(--flag-ink); }
+.shelf { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 1.5rem; }
+.ms { background: var(--bg); border: 1px solid var(--rule); padding: 1.6rem 1.5rem; display: grid; gap: 0.7rem; align-content: start; min-width: 0; position: relative; }
+.ms::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 5px; background: var(--wheat); }
+.ms h3 { font-size: 1.7rem; font-weight: 400; }
+.specs { display: flex; flex-wrap: wrap; gap: 0.2rem 0.8rem; font-size: 0.8rem; letter-spacing: 0.04em; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.specs span + span::before { content: "·"; margin-right: 0.8rem; color: var(--wheat); }
+.ms p { font-size: 0.97rem; }
+
+/* Blog posts */
+.posts { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 1.25rem; }
+.posts li { display: grid; gap: 0.5rem; align-content: start; padding: 1.5rem 1.4rem; background: var(--bg); border: 1px solid var(--rule); min-width: 0; }
+.posts h3 { font-size: 1.45rem; font-weight: 500; }
+.posts p { color: var(--ink-soft); font-size: 0.93rem; line-height: 1.6; }
+.posts a.out { font-size: 0.84rem; font-weight: 600; letter-spacing: 0.05em; margin-top: 0.3rem; width: fit-content; }
+
+/* Visits */
+.offers { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 1.25rem; }
+.offer { border-top: 1px solid var(--ink); padding-top: 1rem; display: grid; gap: 0.4rem; align-content: start; min-width: 0; }
+.offer h3 { font-size: 1.55rem; }
+.offer p { font-size: 0.95rem; }
+.offer .meta { font-size: 0.82rem; color: var(--ink-soft); }
+
+/* Quote band */
+.quote-band { background: var(--band); color: var(--band-ink); }
+.quote-band .wrap { padding-block: clamp(3.5rem, 8vw, 5.5rem); text-align: center; display: grid; gap: 1rem; justify-items: center; }
+.quote-band blockquote { margin: 0; font-family: var(--serif); font-style: italic; font-weight: 300; font-size: clamp(1.7rem, 4vw, 2.6rem); line-height: 1.25; max-width: 26ch; text-wrap: balance; }
+.quote-band cite { font-style: normal; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--wheat); }
+
+/* Contact */
+.contact { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2rem, 6vw, 5rem); align-items: start; }
+@media (max-width: 760px) { .contact { grid-template-columns: minmax(0, 1fr); } }
+.email-row { display: flex; flex-wrap: wrap; gap: 0.7rem; align-items: center; }
+.email { font-family: var(--serif); font-size: 1.8rem; user-select: all; overflow-wrap: anywhere; }
+.copy { font: inherit; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; background: transparent; color: var(--ink); border: 1px solid var(--ink); border-radius: 2px; padding: 0.3rem 0.8rem; cursor: pointer; }
+.socials { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem; font-size: 0.92rem; }
+.socials a { display: inline-flex; align-items: center; gap: 0.45rem; text-decoration: none; }
+.socials a:hover { text-decoration: underline; }
+.socials svg { width: 18px; height: 18px; fill: currentColor; flex: none; }
+form.news { display: grid; gap: 0.8rem; background: var(--wheat-pale); padding: 1.75rem; }
+form.news h3 { font-size: 1.9rem; font-weight: 400; }
+form.news p { font-size: 0.95rem; color: var(--ink-soft); }
+form.news label { font-weight: 600; font-size: 0.85rem; letter-spacing: 0.04em; }
+form.news .row { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+form.news input { flex: 1 1 14rem; min-width: 0; font: inherit; padding: 0.7rem 0.9rem; border: 1px solid var(--rule); border-radius: 2px; background: var(--bg); color: var(--ink); }
+form.news button { font: inherit; font-weight: 600; font-size: 0.88rem; letter-spacing: 0.06em; cursor: pointer; padding: 0.7rem 1.4rem; border: 1px solid var(--ink); background: var(--ink); color: var(--bg); border-radius: 2px; }
+.form-msg { font-size: 0.9rem; font-weight: 600; color: var(--wheat-ink); }
+
+footer.site { border-top: 1px solid var(--rule); font-size: 0.82rem; color: var(--ink-soft); }
+footer.site .wrap { padding-block: 1.6rem; display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; justify-content: space-between; }
+</style>
+<style>body{margin:0}[hidden]{display:none!important}</style>
+</head>
+<body>
+
+
+<div class="review" id="review-bar">
+  <div class="wrap">
+    <span><strong>Draft for Liz's review.</strong> Highlighted items need her input. Her About Me text is unchanged.</span>
+    <button type="button" id="toggle-notes" aria-pressed="false">Hide review notes</button>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="wordmark" href="#top">Liz Sites<small>Children's Book Author</small></a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#books">My Books</a></li>
+        <li><a href="#literacy">Literacy Posts</a></li>
+        <li><a href="#visits">School Visits</a></li>
+        <li><a href="#contact">Get In Touch</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <span class="eyebrow">Official website of</span>
+      <h1 id="hero-title">Liz Sites</h1>
+      <p class="lede">Children's book author, writing imaginative, thoughtful stories about family, loyalty, and belief.</p>
+      <div class="cta">
+        <a class="btn solid" href="#about">Meet Liz</a>
+        <a class="btn line" href="#books">My Books</a>
+      </div>
+      <p class="draft-note note"><strong>What changed:</strong> same colors, fonts, and wheat photo as the current site, rearranged so the photos lead. Google will now show "Liz Sites, Children's Book Author" instead of "Personal Details."</p>
+    </div>
+  </section>
+
+  <section class="page" id="about" aria-labelledby="why-title">
+    <div class="wrap spread">
+      <figure class="photo-col">
+        <div class="arch"><img src="images/liz-mont-saint-michel.jpg" alt="Liz Sites on the causeway at Mont-Saint-Michel, France" width="1100" height="1044"></div>
+        <figcaption>Mont-Saint-Michel, France</figcaption>
+      </figure>
+      <div class="prose">
+        <span class="eyebrow">About Me</span>
+        <h2 id="why-title" style="font-size:var(--step-3);font-weight:300">Why I Write</h2>
+        <p>While teaching K and 1st grades, I fell in love with writing for and with children. Although I had enjoyed writing from a young age, and taken creative writing classes in college, it was teaching the process of writing to young kids that changed things. There is nothing like a harmony of 20-some busy bodies in various stages of a Writer's Workshop where kids are learning to share their own stories.</p>
+        <p>Now I share the magic of writing with my own children, and devote my time to creating stories with the goal of sharing beauty and connection with children.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="page soft" aria-labelledby="more-title">
+    <div class="wrap spread flip">
+      <figure class="photo-col">
+        <div class="snapshot">
+          <img src="images/golden-retriever.jpg" alt="The family's golden retriever sitting in tall garden greenery" width="800" height="1067" loading="lazy">
+          <figcaption>One of the multiple pets</figcaption>
+        </div>
+      </figure>
+      <div class="prose">
+        <span class="eyebrow">About Me</span>
+        <h2 id="more-title" style="font-size:var(--step-3);font-weight:300">More about me</h2>
+        <p>I grew up in Washington, DC, met my husband while living in North Carolina, and now live in a 1908 former home of a railroad conductor in Falls Church, Virginia. I am a Catholic, multiple-pet-owning, bluegrass-listening, outdoor-loving mother of three.</p>
+        <div class="favorites">
+          <div>
+            <h3>Music I enjoy listening to with my children</h3>
+            <p>Young Folk, JJ Heller, Beethoven Blues by Jon Batiste, and Tchaikovsky's ballets</p>
+          </div>
+          <div>
+            <h3>Books I enjoy reading with my children</h3>
+            <p>anything by April Pulley Sayre, Deborah Underwood, Julie Fogliano, G. Brian Karas, and Aiko Ikegami</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page" aria-labelledby="pro-title">
+    <div class="wrap">
+      <div class="prose">
+        <span class="eyebrow">Professional Details</span>
+        <h2 id="pro-title" style="font-size:var(--step-3);font-weight:300">My Background in Early Childhood Literacy</h2>
+        <p>My literacy credentials include a B.A. In Early Childhood Education from Wake Forest University, a M.Ed. in Early Literacy Education from the University of Virginia, and National Board Certification in Literacy.</p>
+        <p>I'm a member of Society of Children's Book Writers and Illustrators and have been published in <em>The Reading Teacher</em> magazine. I also write literacy blog posts (link below).</p>
+        <div class="cred-tags" aria-label="Credentials at a glance">
+          <span>Wake Forest, B.A.</span><span>UVA, M.Ed.</span><span>National Board Certified</span><span>SCBWI</span><span>The Reading Teacher</span>
+        </div>
+        <p class="draft-note note"><strong>One correction:</strong> the current site says Society of Children's Book <em>Authors</em> and Illustrators. The organization's name is <em>Writers</em>, so that one word is fixed. Everything else on this page is Liz's text as written.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="shelf-band" id="books" aria-labelledby="books-title">
+    <div class="wrap">
+      <span class="eyebrow">My Books</span>
+      <h2 id="books-title">I write imaginative, thoughtful children's books that explore introspective themes surrounding family, loyalty, and belief.</h2>
+      <span class="status"><span class="ph">Picture books in progress · seeking representation</span></span>
+    </div>
+  </section>
+
+  <section class="page soft" aria-label="Manuscripts">
+    <div class="wrap">
+      <div class="shelf">
+        <article class="ms">
+          <span class="eyebrow">Picture book</span>
+          <h3><span class="ph">Manuscript title</span></h3>
+          <div class="specs"><span>Ages <span class="ph">4–7</span></span><span><span class="ph">~450</span> words</span><span><span class="ph">Fiction</span></span></div>
+          <p><span class="ph">A one- or two-sentence hook: who the child is, what they want, and what stands in the way.</span></p>
+        </article>
+        <article class="ms">
+          <span class="eyebrow">Picture book</span>
+          <h3><span class="ph">Manuscript title</span></h3>
+          <div class="specs"><span>Ages <span class="ph">3–6</span></span><span><span class="ph">~300</span> words</span><span><span class="ph">Lyrical</span></span></div>
+          <p><span class="ph">A one- or two-sentence hook.</span></p>
+        </article>
+        <article class="ms">
+          <span class="eyebrow">Picture book</span>
+          <h3><span class="ph">Manuscript title</span></h3>
+          <div class="specs"><span>Ages <span class="ph">4–8</span></span><span><span class="ph">~500</span> words</span><span><span class="ph">Nonfiction</span></span></div>
+          <p><span class="ph">A one- or two-sentence hook.</span></p>
+        </article>
+      </div>
+      <p class="draft-note note" style="margin-top:1.5rem"><strong>Replaces "Visit Again To Hear About My Upcoming Published Works!"</strong> Agents and editors look here first. Fill in a title, age range, word count, and hook for each manuscript, or delete the cards and keep just the line above.</p>
+    </div>
+  </section>
+
+  <section class="page" id="literacy" aria-labelledby="lit-title">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Literacy Blog Posts</span>
+        <h2 id="lit-title">For parents and teachers</h2>
+      </div>
+      <ul class="posts">
+        <li>
+          <h3>What should my child be reading independently?</h3>
+          <p>Breaking Down The Developmental Reading Perspective for Parents</p>
+          <a class="out" href="https://magpiebyjenshoop.com/guest-post-what-should-my-child-be-reading-on-his-own/">Read here ↗</a>
+        </li>
+        <li>
+          <h3>Favorite Recently-Published Children's Books</h3>
+          <p>Hot Children's Books By Topic</p>
+          <a class="out" href="https://magpiebyjenshoop.com/the-best-recently-published-childrens-books/">Read here ↗</a>
+        </li>
+        <li>
+          <h3>Supporting Your Child's Literacy</h3>
+          <p>During Coronavirus &amp; Beyond</p>
+          <a class="out" href="https://magpiebyjenshoop.com/guest-expert-post-tips-on-supporting-your-little-ones-literacy-during-coronavirus/">Read here ↗</a>
+        </li>
+        <li>
+          <h3>Books for Babies</h3>
+          <p>Developmentally-Appropriate Picks</p>
+          <a class="out" href="https://magpiebyjenshoop.com/raising-a-minimagpie-bookworm-the-best-books-for-babies/">Read here ↗</a>
+        </li>
+      </ul>
+      <p class="draft-note note" style="margin-top:1.5rem"><strong>Links fixed:</strong> The Fashion Magpie moved to magpiebyjenshoop.com, and the old Books for Babies link was landing on its homepage. These now go straight to each post.</p>
+    </div>
+  </section>
+
+  <section class="page soft" id="visits" aria-labelledby="visits-title">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">School &amp; Library Visits</span>
+        <h2 id="visits-title">A Writer's Workshop for your classroom</h2>
+      </div>
+      <div class="offers">
+        <div class="offer">
+          <h3>Writer's Workshop</h3>
+          <p>Young writers plan, draw, and draft a story of their own, then share it with the group.</p>
+          <span class="meta"><span class="ph">Grades K–2 · 45 minutes · one class</span></span>
+        </div>
+        <div class="offer">
+          <h3>Read-aloud and Q&amp;A</h3>
+          <p>A picture-book read-aloud, followed by questions about how stories are made.</p>
+          <span class="meta"><span class="ph">Pre-K–2 · 30 minutes · up to 60 students</span></span>
+        </div>
+        <div class="offer">
+          <h3>Family literacy night</h3>
+          <p>A talk for parents on choosing books and building reading habits at home.</p>
+          <span class="meta"><span class="ph">Parents and caregivers · 60 minutes</span></span>
+        </div>
+      </div>
+      <p class="draft-note note" style="margin-top:1.5rem"><strong>New, and optional:</strong> suggested offerings built on Liz's Writer's Workshop experience. Rewrite in her words, or remove until she's ready to book visits.</p>
+    </div>
+  </section>
+
+  <section class="quote-band" aria-label="Favorite quote">
+    <div class="wrap">
+      <blockquote>Not until we are lost do we begin to understand ourselves</blockquote>
+      <cite>Henry David Thoreau</cite>
+    </div>
+  </section>
+
+  <section class="page" id="contact" aria-labelledby="contact-title">
+    <div class="wrap contact">
+      <div class="prose">
+        <span class="eyebrow">Get In Touch</span>
+        <h2 id="contact-title" style="font-size:var(--step-3);font-weight:300">@lizsiteswriting</h2>
+        <p>For agent and editor inquiries, school visits, or just to say hello.</p>
+        <div class="email-row">
+          <span class="email" id="email-text"><span class="ph">hello@lizsites.com</span></span>
+          <button type="button" class="copy" id="copy-email">Copy</button>
+        </div>
+        <ul class="socials">
+          <li><a href="https://www.instagram.com/lizsiteswriting/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 2c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.2.8-.4.4-.6.7-.8 1.2-.2.4-.3 1-.4 2.1C2.7 9.9 2.7 10.3 2.7 12s0 2.1.1 3.3c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.2.4.4.7.6 1.2.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.2-.8.4-.4.6-.7.8-1.2.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-3.3s0-2.1-.1-3.3c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.2-.4-.4-.7-.6-1.2-.8-.4-.2-1-.3-2.1-.4-1.2-.1-1.6-.1-4.7-.1zm0 3.4a4.4 4.4 0 110 8.8 4.4 4.4 0 010-8.8zm0 2a2.4 2.4 0 100 4.8 2.4 2.4 0 000-4.8zm5.6-2.3a1 1 0 11-2 0 1 1 0 012 0z"/></svg>Instagram</a></li>
+          <li><a href="https://x.com/lizsiteswriting"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.2-8.3L1.8 3h6.4l4.4 5.8L17.8 3zm-1.1 16.2h1.7L7.2 4.7H5.4l11.3 14.5z"/></svg>X</a></li>
+          <li><a href="https://www.linkedin.com/in/elizabeth-sites-0391a8172"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9.75h4V21H3V9.75zM9.5 9.75h3.8v1.55h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.05c0-1.2-.02-2.75-1.68-2.75-1.68 0-1.94 1.31-1.94 2.66V21h-4V9.75z"/></svg>LinkedIn</a></li>
+        </ul>
+        <p class="draft-note note"><strong>Choose a public email.</strong> The old contact block had a Submit button but no visible fields, so a plain address is more reliable.</p>
+      </div>
+      <form class="news" id="news-form" novalidate>
+        <span class="eyebrow">Newsletter</span>
+        <h3>Story news, now and then</h3>
+        <p>Occasional notes on new stories, favorite books to read together, and, someday, a book launch.</p>
+        <label for="news-email">Email address</label>
+        <div class="row">
+          <input id="news-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+          <button type="submit">Sign up</button>
+        </div>
+        <p class="form-msg" id="news-msg" role="status" hidden></p>
+        <p class="draft-note note">Connects to a free email service like Buttondown once the site is hosted. It doesn't collect addresses in this draft.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Liz Sites, Children's Book Author</span>
+    <a href="#top">Back to top</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var btn = document.getElementById('toggle-notes');
+  if (btn) btn.addEventListener('click', function () {
+    var off = !document.body.classList.contains('notes-off');
+    document.body.classList.toggle('notes-off', off);
+    document.querySelectorAll('.note').forEach(function (n) { n.hidden = off; });
+    btn.textContent = off ? 'Show review notes' : 'Hide review notes';
+    btn.setAttribute('aria-pressed', String(off));
+  });
+
+  var copy = document.getElementById('copy-email');
+  copy.addEventListener('click', function () {
+    var el = document.getElementById('email-text');
+    var text = el.textContent.trim();
+    var done = function () { copy.textContent = 'Copied'; setTimeout(function () { copy.textContent = 'Copy'; }, 1600); };
+    var fallback = function () {
+      var r = document.createRange(); r.selectNodeContents(el);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      copy.textContent = 'Selected';
+    };
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(text).then(done, fallback); }
+      else { fallback(); }
+    } catch (e) { fallback(); }
+  });
+
+  var form = document.getElementById('news-form');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var input = document.getElementById('news-email');
+    var msg = document.getElementById('news-msg');
+    msg.hidden = false;
+    if (!input.value || !input.checkValidity()) { msg.textContent = 'Enter an email address like name@example.com.'; return; }
+    msg.textContent = 'Preview only: sign-ups start working once the newsletter service is connected.';
+  });
+})();
+</script>
+
+</body>
+</html>
