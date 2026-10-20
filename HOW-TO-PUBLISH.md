@@ -22,15 +22,9 @@ All text and photos are filled in. To change wording, open `index.html` in any t
 3. In Netlify (Domain settings → Add custom domain) or Cloudflare Pages (Custom domains), add `lizsites.com` and `www.lizsites.com`. Follow the DNS records they show you.
 4. HTTPS is set up automatically. Once the new site loads on lizsites.com, cancel the Wix premium plan, but keep the domain registration active until any transfer finishes.
 
-## 4. Turn on the newsletter (optional)
+## 4. Adding a newsletter later
 
-Sign up for Buttondown or Mailchimp (both have free tiers for small lists). Copy the form's action URL from their embed code and change the form tag to:
-
-```html
-<form class="news" action="https://buttondown.com/api/emails/embed-subscribe/YOURNAME" method="post">
-```
-
-Then delete the `news-form` submit handler at the bottom of the file (the block starting `var form = document.getElementById('news-form')`).
+The site has no sign-up form for now. When Liz wants one, Buttondown and Mailchimp both offer a free tier and an embed form that can go in the Get In Touch section.
 
 ## 5. Once it's live
 

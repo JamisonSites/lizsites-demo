@@ -162,8 +162,6 @@ figure { margin: 0; }
 .quote-band cite { font-style: normal; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--wheat); }
 
 /* Contact */
-.contact { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2rem, 6vw, 5rem); align-items: start; }
-@media (max-width: 760px) { .contact { grid-template-columns: minmax(0, 1fr); } }
 .email-row { display: flex; flex-wrap: wrap; gap: 0.7rem; align-items: center; }
 .email { font-family: var(--serif); font-size: 1.8rem; user-select: all; overflow-wrap: anywhere; }
 .copy { font: inherit; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; background: transparent; color: var(--ink); border: 1px solid var(--ink); border-radius: 2px; padding: 0.3rem 0.8rem; cursor: pointer; }
@@ -171,14 +169,6 @@ figure { margin: 0; }
 .socials a { display: inline-flex; align-items: center; gap: 0.45rem; text-decoration: none; }
 .socials a:hover { text-decoration: underline; }
 .socials svg { width: 18px; height: 18px; fill: currentColor; flex: none; }
-form.news { display: grid; gap: 0.8rem; background: var(--wheat-pale); padding: 1.75rem; }
-form.news h3 { font-size: 1.9rem; font-weight: 400; }
-form.news p { font-size: 0.95rem; color: var(--ink-soft); }
-form.news label { font-weight: 600; font-size: 0.85rem; letter-spacing: 0.04em; }
-form.news .row { display: flex; flex-wrap: wrap; gap: 0.6rem; }
-form.news input { flex: 1 1 14rem; min-width: 0; font: inherit; padding: 0.7rem 0.9rem; border: 1px solid var(--rule); border-radius: 2px; background: var(--bg); color: var(--ink); }
-form.news button { font: inherit; font-weight: 600; font-size: 0.88rem; letter-spacing: 0.06em; cursor: pointer; padding: 0.7rem 1.4rem; border: 1px solid var(--ink); background: var(--ink); color: var(--bg); border-radius: 2px; }
-.form-msg { font-size: 0.9rem; font-weight: 600; color: var(--wheat-ink); }
 
 footer.site { border-top: 1px solid var(--rule); font-size: 0.82rem; color: var(--ink-soft); }
 footer.site .wrap { padding-block: 1.6rem; display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; justify-content: space-between; }
@@ -329,17 +319,6 @@ footer.site .wrap { padding-block: 1.6rem; display: flex; flex-wrap: wrap; gap: 
           <li><a href="https://www.linkedin.com/in/elizabeth-sites-0391a8172"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9.75h4V21H3V9.75zM9.5 9.75h3.8v1.55h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.05c0-1.2-.02-2.75-1.68-2.75-1.68 0-1.94 1.31-1.94 2.66V21h-4V9.75z"/></svg>LinkedIn</a></li>
         </ul>
       </div>
-      <form class="news" id="news-form" novalidate>
-        <span class="eyebrow">Newsletter</span>
-        <h3>Story news, now and then</h3>
-        <p>Occasional notes on new stories, favorite books to read together, and, someday, a book launch.</p>
-        <label for="news-email">Email address</label>
-        <div class="row">
-          <input id="news-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
-          <button type="submit">Sign up</button>
-        </div>
-        <p class="form-msg" id="news-msg" role="status" hidden></p>
-      </form>
     </div>
   </section>
 </main>
@@ -369,15 +348,6 @@ footer.site .wrap { padding-block: 1.6rem; display: flex; flex-wrap: wrap; gap: 
     } catch (e) { fallback(); }
   });
 
-  var form = document.getElementById('news-form');
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var input = document.getElementById('news-email');
-    var msg = document.getElementById('news-msg');
-    msg.hidden = false;
-    if (!input.value || !input.checkValidity()) { msg.textContent = 'Enter an email address like name@example.com.'; return; }
-    msg.textContent = 'Preview only: sign-ups start working once the newsletter service is connected.';
-  });
 })();
 </script>
 
