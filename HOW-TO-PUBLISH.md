@@ -2,14 +2,9 @@
 
 The whole site is `index.html` plus an `images` folder; keep them together. It needs no build step, no database, and no monthly Wix plan.
 
-## 1. Finish the content
+## 1. Content
 
-Open `index.html` in any text editor and replace every yellow-highlighted placeholder (search for `class="ph"`):
-
-- School visit details (or delete that section)
-- The public email address
-
-When a placeholder is filled in, remove its `<span class="ph">…</span>` wrapper so the yellow highlight goes away.
+All text and photos are filled in. To change wording, open `index.html` in any text editor.
 
 **Photos:** the four photos live in the `images` folder. To swap one, replace the file with a new photo of the same name.
 
