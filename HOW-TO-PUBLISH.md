@@ -6,8 +6,6 @@ The whole site is `index.html` plus an `images` folder; keep them together. It n
 
 Open `index.html` in any text editor and replace every yellow-highlighted placeholder (search for `class="ph"`):
 
-- Manuscript titles, age ranges, word counts, and hooks (the "My Books" section)
-- Status line ("Seeking representation" or whatever is accurate)
 - School visit details (or delete that section)
 - The public email address
 

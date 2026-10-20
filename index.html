@@ -80,13 +80,8 @@ img { display: block; max-width: 100%; }
 }
 .eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--wheat-ink); }
 
-/* Review bar and notes */
-.review { background: var(--flag); color: var(--flag-ink); border-bottom: 1px solid var(--flag-rule); font-size: 0.88rem; line-height: 1.5; }
-.review .wrap { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: center; justify-content: space-between; padding-block: 0.6rem; }
-.review button { font: inherit; font-weight: 600; color: var(--flag-ink); background: transparent; border: 1.5px solid var(--flag-ink); border-radius: 999px; padding: 0.2rem 0.85rem; cursor: pointer; }
-.draft-note { background: var(--flag); color: var(--flag-ink); border: 1px dashed var(--flag-rule); border-radius: 8px; padding: 0.6rem 0.9rem; font-size: 0.86rem; line-height: 1.55; max-width: var(--measure); }
+/* Placeholders Liz still needs to fill in */
 .ph { background: var(--flag); color: var(--flag-ink); border-radius: 3px; padding: 0 0.25em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
-body.notes-off .ph { background: transparent; color: inherit; padding: 0; }
 
 /* Header */
 header.site { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--rule); }
@@ -111,7 +106,6 @@ nav a:hover { text-decoration: underline; }
 .hero .btn.line { color: #FFFFFF; }
 .hero .btn.line:hover { background: rgba(255,255,255,0.12); color: #FFFFFF; }
 .hero .socials a { color: #FFFFFF; }
-.hero .draft-note { margin-top: 0.5rem; }
 
 /* Generic section */
 section.page { padding-block: clamp(3.5rem, 8vw, 6rem); }
@@ -129,18 +123,16 @@ section.soft { background: var(--bg-soft); }
   .spread, .spread.flip { grid-template-columns: minmax(0, 1fr); }
   .spread.flip .photo-col { order: 0; }
 }
-.arch { border-radius: 999px 999px 6px 6px; overflow: hidden; aspect-ratio: 4 / 5; max-width: 100%; background: var(--wheat-pale); }
-.arch img { width: 100%; height: 100%; object-fit: cover; object-position: 62% 40%; }
+.photo { border-radius: 6px; overflow: hidden; max-width: 100%; background: var(--wheat-pale); }
+.photo img { width: 100%; height: auto; }
 figure { margin: 0; }
-figcaption { font-family: var(--serif); font-style: italic; font-size: 1.05rem; color: var(--ink-soft); margin-top: 0.7rem; text-align: center; }
-.snapshot { background: var(--bg); padding: 0.8rem 0.8rem 0.3rem; box-shadow: 0 1px 2px rgba(0,0,0,0.08), 0 10px 28px rgba(0,0,0,0.1); transform: rotate(-2deg); max-width: 380px; margin-inline: auto; }
-.snapshot img { aspect-ratio: 4 / 5; width: 100%; height: auto; object-fit: cover; object-position: center 30%; }
-.snapshot figcaption { margin-block: 0.6rem 0.4rem; }
+.snapshot { background: var(--bg); padding: 0.8rem 0.8rem 2.4rem; box-shadow: 0 1px 2px rgba(0,0,0,0.08), 0 10px 28px rgba(0,0,0,0.1); transform: rotate(-2deg); max-width: 360px; margin-inline: auto; }
+.snapshot img { width: 100%; height: auto; }
 @media (prefers-reduced-motion: no-preference) {
   .snapshot { transition: transform 0.4s ease; }
   .snapshot:hover { transform: rotate(0deg); }
 }
-@media (max-width: 780px) { .arch { max-width: 420px; margin-inline: auto; width: 100%; } }
+@media (max-width: 780px) { .photo { max-width: 520px; margin-inline: auto; width: 100%; } }
 
 .favorites { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 1.25rem; margin-top: 0.4rem; }
 .favorites div { border-top: 1px solid var(--wheat); padding-top: 0.8rem; min-width: 0; }
@@ -157,15 +149,6 @@ figcaption { font-family: var(--serif); font-style: italic; font-size: 1.05rem; 
 .shelf-band .wrap { position: relative; padding-block: clamp(4rem, 10vw, 7rem); display: grid; gap: 1rem; justify-items: center; text-align: center; }
 .shelf-band .eyebrow { color: #EBD39E; }
 .shelf-band h2 { font-size: var(--step-3); font-weight: 300; max-width: 24ch; line-height: 1.2; }
-.status { display: inline-block; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.4rem 1rem; border: 1px solid rgba(255,255,255,0.6); border-radius: 999px; }
-.shelf-band .status .ph { color: var(--flag-ink); }
-.shelf { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 1.5rem; }
-.ms { background: var(--bg); border: 1px solid var(--rule); padding: 1.6rem 1.5rem; display: grid; gap: 0.7rem; align-content: start; min-width: 0; position: relative; }
-.ms::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 5px; background: var(--wheat); }
-.ms h3 { font-size: 1.7rem; font-weight: 400; }
-.specs { display: flex; flex-wrap: wrap; gap: 0.2rem 0.8rem; font-size: 0.8rem; letter-spacing: 0.04em; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
-.specs span + span::before { content: "·"; margin-right: 0.8rem; color: var(--wheat); }
-.ms p { font-size: 0.97rem; }
 
 /* Blog posts */
 .posts { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 1.25rem; }
@@ -214,13 +197,6 @@ footer.site .wrap { padding-block: 1.6rem; display: flex; flex-wrap: wrap; gap: 
 <body>
 
 
-<div class="review" id="review-bar">
-  <div class="wrap">
-    <span><strong>Draft for Liz's review.</strong> Highlighted items need her input. Her About Me text is unchanged.</span>
-    <button type="button" id="toggle-notes" aria-pressed="false">Hide review notes</button>
-  </div>
-</div>
-
 <header class="site">
   <div class="wrap">
     <a class="wordmark" href="#top">Liz Sites<small>Children's Book Author</small></a>
@@ -246,15 +222,13 @@ footer.site .wrap { padding-block: 1.6rem; display: flex; flex-wrap: wrap; gap: 
         <a class="btn solid" href="#about">Meet Liz</a>
         <a class="btn line" href="#books">My Books</a>
       </div>
-      <p class="draft-note note"><strong>What changed:</strong> same colors, fonts, and wheat photo as the current site, rearranged so the photos lead. Google will now show "Liz Sites, Children's Book Author" instead of "Personal Details."</p>
     </div>
   </section>
 
   <section class="page" id="about" aria-labelledby="why-title">
     <div class="wrap spread">
       <figure class="photo-col">
-        <div class="arch"><img src="images/liz-mont-saint-michel.jpg" alt="Liz Sites on the causeway at Mont-Saint-Michel, France" width="1100" height="1044"></div>
-        <figcaption>Mont-Saint-Michel, France</figcaption>
+        <div class="photo"><img src="images/liz-mont-saint-michel.jpg" alt="Liz Sites on the causeway at Mont-Saint-Michel, France" width="1100" height="1044"></div>
       </figure>
       <div class="prose">
         <span class="eyebrow">About Me</span>
@@ -270,7 +244,6 @@ footer.site .wrap { padding-block: 1.6rem; display: flex; flex-wrap: wrap; gap: 
       <figure class="photo-col">
         <div class="snapshot">
           <img src="images/golden-retriever.jpg" alt="The family's golden retriever sitting in tall garden greenery" width="800" height="1067" loading="lazy">
-          <figcaption>One of the multiple pets</figcaption>
         </div>
       </figure>
       <div class="prose">
@@ -301,7 +274,6 @@ footer.site .wrap { padding-block: 1.6rem; display: flex; flex-wrap: wrap; gap: 
         <div class="cred-tags" aria-label="Credentials at a glance">
           <span>Wake Forest, B.A.</span><span>UVA, M.Ed.</span><span>National Board Certified</span><span>SCBWI</span><span>The Reading Teacher</span>
         </div>
-        <p class="draft-note note"><strong>One correction:</strong> the current site says Society of Children's Book <em>Authors</em> and Illustrators. The organization's name is <em>Writers</em>, so that one word is fixed. Everything else on this page is Liz's text as written.</p>
       </div>
     </div>
   </section>
@@ -310,33 +282,6 @@ footer.site .wrap { padding-block: 1.6rem; display: flex; flex-wrap: wrap; gap: 
     <div class="wrap">
       <span class="eyebrow">My Books</span>
       <h2 id="books-title">I write imaginative, thoughtful children's books that explore introspective themes surrounding family, loyalty, and belief.</h2>
-      <span class="status"><span class="ph">Picture books in progress · seeking representation</span></span>
-    </div>
-  </section>
-
-  <section class="page soft" aria-label="Manuscripts">
-    <div class="wrap">
-      <div class="shelf">
-        <article class="ms">
-          <span class="eyebrow">Picture book</span>
-          <h3><span class="ph">Manuscript title</span></h3>
-          <div class="specs"><span>Ages <span class="ph">4–7</span></span><span><span class="ph">~450</span> words</span><span><span class="ph">Fiction</span></span></div>
-          <p><span class="ph">A one- or two-sentence hook: who the child is, what they want, and what stands in the way.</span></p>
-        </article>
-        <article class="ms">
-          <span class="eyebrow">Picture book</span>
-          <h3><span class="ph">Manuscript title</span></h3>
-          <div class="specs"><span>Ages <span class="ph">3–6</span></span><span><span class="ph">~300</span> words</span><span><span class="ph">Lyrical</span></span></div>
-          <p><span class="ph">A one- or two-sentence hook.</span></p>
-        </article>
-        <article class="ms">
-          <span class="eyebrow">Picture book</span>
-          <h3><span class="ph">Manuscript title</span></h3>
-          <div class="specs"><span>Ages <span class="ph">4–8</span></span><span><span class="ph">~500</span> words</span><span><span class="ph">Nonfiction</span></span></div>
-          <p><span class="ph">A one- or two-sentence hook.</span></p>
-        </article>
-      </div>
-      <p class="draft-note note" style="margin-top:1.5rem"><strong>Replaces "Visit Again To Hear About My Upcoming Published Works!"</strong> Agents and editors look here first. Fill in a title, age range, word count, and hook for each manuscript, or delete the cards and keep just the line above.</p>
     </div>
   </section>
 
@@ -368,7 +313,6 @@ footer.site .wrap { padding-block: 1.6rem; display: flex; flex-wrap: wrap; gap: 
           <a class="out" href="https://magpiebyjenshoop.com/raising-a-minimagpie-bookworm-the-best-books-for-babies/">Read here ↗</a>
         </li>
       </ul>
-      <p class="draft-note note" style="margin-top:1.5rem"><strong>Links fixed:</strong> The Fashion Magpie moved to magpiebyjenshoop.com, and the old Books for Babies link was landing on its homepage. These now go straight to each post.</p>
     </div>
   </section>
 
@@ -395,7 +339,6 @@ footer.site .wrap { padding-block: 1.6rem; display: flex; flex-wrap: wrap; gap: 
           <span class="meta"><span class="ph">Parents and caregivers · 60 minutes</span></span>
         </div>
       </div>
-      <p class="draft-note note" style="margin-top:1.5rem"><strong>New, and optional:</strong> suggested offerings built on Liz's Writer's Workshop experience. Rewrite in her words, or remove until she's ready to book visits.</p>
     </div>
   </section>
 
@@ -421,7 +364,6 @@ footer.site .wrap { padding-block: 1.6rem; display: flex; flex-wrap: wrap; gap: 
           <li><a href="https://x.com/lizsiteswriting"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.2-8.3L1.8 3h6.4l4.4 5.8L17.8 3zm-1.1 16.2h1.7L7.2 4.7H5.4l11.3 14.5z"/></svg>X</a></li>
           <li><a href="https://www.linkedin.com/in/elizabeth-sites-0391a8172"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9.75h4V21H3V9.75zM9.5 9.75h3.8v1.55h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.05c0-1.2-.02-2.75-1.68-2.75-1.68 0-1.94 1.31-1.94 2.66V21h-4V9.75z"/></svg>LinkedIn</a></li>
         </ul>
-        <p class="draft-note note"><strong>Choose a public email.</strong> The old contact block had a Submit button but no visible fields, so a plain address is more reliable.</p>
       </div>
       <form class="news" id="news-form" novalidate>
         <span class="eyebrow">Newsletter</span>
@@ -433,7 +375,6 @@ footer.site .wrap { padding-block: 1.6rem; display: flex; flex-wrap: wrap; gap: 
           <button type="submit">Sign up</button>
         </div>
         <p class="form-msg" id="news-msg" role="status" hidden></p>
-        <p class="draft-note note">Connects to a free email service like Buttondown once the site is hosted. It doesn't collect addresses in this draft.</p>
       </form>
     </div>
   </section>
@@ -448,15 +389,6 @@ footer.site .wrap { padding-block: 1.6rem; display: flex; flex-wrap: wrap; gap: 
 
 <script>
 (function () {
-  var btn = document.getElementById('toggle-notes');
-  if (btn) btn.addEventListener('click', function () {
-    var off = !document.body.classList.contains('notes-off');
-    document.body.classList.toggle('notes-off', off);
-    document.querySelectorAll('.note').forEach(function (n) { n.hidden = off; });
-    btn.textContent = off ? 'Show review notes' : 'Hide review notes';
-    btn.setAttribute('aria-pressed', String(off));
-  });
-
   var copy = document.getElementById('copy-email');
   copy.addEventListener('click', function () {
     var el = document.getElementById('email-text');
